@@ -45,7 +45,7 @@ function Header() {
               style={styles}
               variant="h6"
             >
-              Crypto Hunter
+              Crypto Market
             </Typography>
             <Select
               variant="outlined"

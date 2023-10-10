@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Banner from "../components/Banner/Banner";
+import CoinsTable from "../components/CoinsTable";
+
 function Homepage() {
   return (
     <>
-      <Banner></Banner>
+      <Banner />
+      <CoinsTable />
     </>
   );
 }
