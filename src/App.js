@@ -6,7 +6,7 @@ import CoinPage from "./Pages/CoinPage";
 
 function App() {
   const styles = {
-    backgroundColor: "#14161a",
+    backgroundColor: "#61677A", //14161a
     color: "white",
     minHeight: "100vh",
   };
