@@ -10,12 +10,12 @@ import {
   createTheme,
   ThemeProvider,
 } from "@mui/material";
-// import { CryptoState } from "../CryptoProvider"; //(this works)
+// import { useCryptoState } from "../CryptoProvider"; //(this works)
 import { CryptoContext } from "../CryptoProvider";
 
 function Header() {
   const navigate = useNavigate();
-  //const { currency, updateCurrency, symbol } = CryptoState(); //(this works)
+  //const { currency, updateCurrency, symbol } = useCryptoState(); //(this works)
   const CryptoContextData = useContext(CryptoContext);
 
   const styles = {

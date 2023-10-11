@@ -25,6 +25,6 @@ function CryptoProvider({ children }) {
 }
 export default CryptoProvider;
 
-export const CryptoState = () => {
+export const useCryptoState = () => {
   return useContext(CryptoContext);
 };

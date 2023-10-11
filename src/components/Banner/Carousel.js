@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { TrendingCoins } from "../../config/api";
-import { CryptoState } from "../../CryptoProvider";
+// import { useCryptoState } from "../../CryptoProvider";
+import { CryptoContext } from "../../CryptoProvider";
 import axios from "axios";
 import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
@@ -27,7 +28,7 @@ export function numberWithCommas(x) {
 // Axios is a javascript library used to make HTTP requests. Because it incorporates promises it makes it easy to work with async code and its easier to read
 function Carousel() {
   const [trending, setTrending] = useState([]);
-  const { currency, symbol } = CryptoState();
+  const { currency, symbol } = useContext(CryptoContext);
 
   const apiURL = TrendingCoins(currency);
 
