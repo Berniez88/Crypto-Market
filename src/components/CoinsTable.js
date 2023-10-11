@@ -29,17 +29,6 @@ function CoinsTable() {
     },
   });
 
-  const styles = {
-    row: {
-      backgroundColor: "#16171a",
-      cursor: "pointer",
-      "&:hover": {
-        backgroundColor: "#131111",
-      },
-      fontFamily: "montserrat",
-    },
-  };
-
   const navigate = useNavigate();
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);

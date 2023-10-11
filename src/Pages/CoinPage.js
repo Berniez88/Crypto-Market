@@ -10,30 +10,10 @@ import { useTheme } from "@emotion/react";
 // import parse from "html-react-parser";
 // import ReactHtmlParser from "react-html-parser";
 function CoinPage() {
-  const selectedCoin = useParams();
+  const selectedCoin = useParams(); // grabs the params of the selected coin
   const [coin, setCoin] = useState();
   const { currency, symbol } = useContext(CryptoContext);
 
-  // const useStyles = makeStyles((theme) => ({
-  //   container: {
-  //     display: "flex",
-  //     [theme.breakpoints.down("md")]: {
-  //       flexDirection: "column",
-  //       alignItems: "center",
-  //     },
-  //   },
-  //   sidebar: {
-  //     width: "30%",
-  //     [theme.breakpoints.down("md")]: {
-  //       width: "100%",
-  //     },
-  //     display: "flex",
-  //     flexDirection: "column",
-  //     alignItems: "center",
-  //     marginTop: 25,
-  //     borderRight: "2px solid grey",
-  //   },
-  // }));
   const theme = useTheme();
   const Container = styled("div")(({ theme }) => ({
     display: "flex",
@@ -89,26 +69,6 @@ function CoinPage() {
       alignItems: "start",
     },
   }));
-
-  // const styles = {
-  //   marketData: {
-  //     alignSelf: "start",
-  //     padding: 25,
-  //     paddingTop: 10,
-  //     width: "100%",
-  //     [theme.breakpoints.down("md")]: {
-  //       display: "flex",
-  //       justiContent: "space-around",
-  //     },
-  //     [theme.breakpoints.down("sm")]: {
-  //       display: "column",
-  //       justiContent: "center",
-  //     },
-  //     [theme.breakpoints.down("xs")]: {
-  //       alignItems: "start",
-  //     },
-  //   },
-  // };
 
   const fetchCoin = async () => {
     try {

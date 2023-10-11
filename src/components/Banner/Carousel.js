@@ -25,7 +25,7 @@ const styles = {
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-// Axios is a javascript library used to make HTTP requests. Because it incorporates promises it makes it easy to work with async code and its easier to read
+
 function Carousel() {
   const [trending, setTrending] = useState([]);
   const { currency, symbol } = useContext(CryptoContext);
@@ -77,6 +77,7 @@ function Carousel() {
       console.log("Error: ", err);
     }
   };
+
   return (
     <div style={styles.carousel}>
       <AliceCarousel
